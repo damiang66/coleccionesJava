@@ -36,13 +36,15 @@ public class Ejercicio3 {
         System.out.println("ingrese el nombre del alumno a calcular la nota final");
         String buscar=leer.next();
         double notaFinal=0;
+        int indice=0;
         for (int i = 0; i < listaAlumno.size(); i++) {
             if (buscar.equals(listaAlumno.get(i).getNombre())){
-                notaFinal=servicio.notaFinal(buscar, listaAlumno); 
+                notaFinal=servicio.notaFinal(buscar, listaAlumno);
+                indice=i;
            
         }
         }
-        System.out.println("la nota final es "+ notaFinal);      
+        System.out.println("el alumno "+listaAlumno.get(indice).getNombre()+" tiene una nota final de "+ notaFinal);      
        
             
      
